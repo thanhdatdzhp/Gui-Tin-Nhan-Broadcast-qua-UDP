@@ -97,7 +97,9 @@ Hệ thống khai thác ưu điểm của UDP:
 ### 🔹 Các bước thực hiện  
 
 #### **Bước 1: Clone project từ GitHub**
-
+```bash
+https://github.com/thanhdatdzhp11/Gui-Tin-Nhan-Broadcast-qua-UDP/tree/main/TinNhanBROADCAST
+```
 
 Bước 2: Import vào Eclipse
 
@@ -122,9 +124,9 @@ Bước 5: Sử dụng
 
 📱 5. Thông Tin Liên Hệ
 
-👤 Họ và tên: Ngô Thành Đạt
-🏫 Lớp: CNTT 16-01
-📧 Email: thanhdatdzhp11@gmail.com
-☎ Điện thoại: 0901 562 638
+👤 Họ và tên: Ngô Thành Đạt <br>
+🏫 Lớp: CNTT 16-01 <br>
+📧 Email: thanhdatdzhp11@gmail.com <br>
+☎ Điện thoại: 0901 562 638 <br>
 
 © 2025 AIoTLab, Faculty of Information Technology – DaiNam University.
