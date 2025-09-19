@@ -1,80 +1,99 @@
-📖 1. Giới thiệu
+<h2 align="center">
+    <a href="https://dainam.edu.vn/vi/khoa-cong-nghe-thong-tin">
+    🎓 Faculty of Information Technology (DaiNam University)
+    </a>
+</h2>
 
-- Hệ thống gửi tin nhắn broadcast qua UDP là một ứng dụng minh họa cơ chế truyền thông tin trong mạng cục bộ (LAN) bằng giao thức UDP (User Datagram Protocol) kết hợp với kỹ thuật broadcast.
-- Ứng dụng được thiết kế với hai thành phần chính:
-- Server: đóng vai trò “điểm thu phát trung tâm”, lắng nghe các gói tin được gửi đến qua cổng UDP định trước, hiển thị nội dung tin nhắn lên giao diện và phản hồi cho tất cả các máy trong cùng mạng.
-- Client: cho phép người dùng nhập nội dung tin nhắn và gửi đi. Tin nhắn này sẽ được broadcast tới địa chỉ quảng bá (broadcast address) của mạng LAN, đảm bảo tất cả các thiết bị đang chạy ứng dụng đều có thể nhận được.
+<h2 align="center">
+   📡 Hệ Thống Gửi Tin Nhắn Broadcast Qua UDP
+</h2>
 
-🔑 Nguyên lý hoạt động
+<div align="center">
+    <p align="center">
+        <img alt="AIoTLab Logo" width="170" src="https://github.com/user-attachments/assets/711a2cd8-7eb4-4dae-9d90-12c0a0a208a2" />
+        <img alt="AIoTLab Logo" width="180" src="https://github.com/user-attachments/assets/dc2ef2b8-9a70-4cfa-9b4b-f6c2f25f1660" />
+        <img alt="DaiNam University Logo" width="200" src="https://github.com/user-attachments/assets/77fe0fd1-2e55-4032-be3c-b1a705a1b574" />
+    </p>
 
-- UDP là một giao thức không kết nối (connectionless), tốc độ xử lý nhanh, gói tin được gửi đi mà không cần quá trình “bắt tay” như TCP. Khi người dùng gửi tin nhắn:
-- Client tạo gói tin chứa dữ liệu người dùng nhập.
-- Gói tin được gửi đến địa chỉ broadcast của mạng (ví dụ: 192.168.1.255).
-- Tất cả các thiết bị trong cùng subnet đang lắng nghe trên cổng UDP đó sẽ nhận được gói tin.
-- Server nhận và hiển thị nội dung, đồng thời có thể phản hồi lại cho các client khác.
-- Điều này giúp hệ thống trở thành một giải pháp lý tưởng để truyền thông điệp nhanh trong mạng nội bộ.
+[![AIoTLab](https://img.shields.io/badge/AIoTLab-green?style=for-the-badge)](https://www.facebook.com/DNUAIoTLab)
+[![Faculty of Information Technology](https://img.shields.io/badge/Faculty%20of%20Information%20Technology-blue?style=for-the-badge)](https://dainam.edu.vn/vi/khoa-cong-nghe-thong-tin)
+[![DaiNam University](https://img.shields.io/badge/DaiNam%20University-orange?style=for-the-badge)](https://dainam.edu.vn)
 
-🌟 2. Ưu điểm của hệ thống
+</div>
 
-- Đơn giản, dễ triển khai: không yêu cầu thiết lập kết nối phức tạp.
-- Tốc độ truyền nhanh: do UDP không có cơ chế xác nhận gói tin nên độ trễ thấp, phù hợp với các ứng dụng thông báo tức thời.
-- Minh họa kiến thức lập trình mạng: giúp người học hiểu rõ hơn về socket, broadcast, và cơ chế hoạt động của UDP.
-- Ứng dụng thực tiễn: có thể mở rộng để xây dựng các hệ thống chat nội bộ, công cụ gửi thông báo trong LAN, hoặc phần mềm hỗ trợ quản trị hệ thống.
+---
 
-🔧 3. Ngôn ngữ và công nghệ sử dụng
+## 📖 1. Giới thiệu  
 
-- Thành phần	Mô tả
-- Ngôn ngữ lập trình	Java (phiên bản JDK 21 hoặc cao hơn)
-- Giao diện người dùng	Java Swing (cửa sổ chat, input, nút gửi/nhận)
-- Giao thức mạng	UDP – sử dụng DatagramSocket & DatagramPacket
-- IDE khuyến nghị	Eclipse (bản mới nhất)
-- Hệ điều hành	Windows, Linux hoặc macOS (chạy được trên tất cả nền tảng hỗ trợ Java)
+Hệ thống **gửi tin nhắn broadcast qua UDP** là một ứng dụng mô phỏng việc **truyền thông điệp trong mạng cục bộ (LAN)** bằng cách sử dụng **giao thức UDP** kết hợp với **kỹ thuật broadcast**.  
 
-🚀 4. Hướng dẫn cài đặt và chạy
-🔹 Yêu cầu hệ thống
+Ứng dụng được xây dựng với hai thành phần chính:  
 
-- Eclipse IDE (khuyến nghị bản mới nhất).
-- JDK 21+ đã được cài đặt và thiết lập biến môi trường JAVA_HOME.
-- Git (dùng để clone project từ GitHub).
+- **Server:** lắng nghe gói tin được gửi đến trên một cổng UDP cố định, hiển thị nội dung tin nhắn lên giao diện và có thể phản hồi tới toàn bộ các client trong mạng.  
+- **Client:** cung cấp giao diện cho người dùng nhập nội dung tin nhắn, sau đó gửi tin đó đến địa chỉ broadcast. Tất cả client khác trong mạng nhận được gói tin ngay lập tức.  
 
-🔹 Các bước thực hiện
-Bước 1: Lấy project từ GitHub
+### 🔑 Nguyên lý hoạt động
+1. Client tạo một **DatagramPacket** chứa nội dung tin nhắn.
+2. Gói tin được gửi đến địa chỉ broadcast (ví dụ: `192.168.1.255`).
+3. Server và các client khác đang lắng nghe trên cổng UDP sẽ nhận được gói tin.
+4. Tin nhắn được hiển thị đồng thời trên nhiều máy, mô phỏng cơ chế truyền tin nhanh trong LAN.  
 
-- Mở terminal hoặc Git Bash, chạy:
-git clone <link-repository>
+Hệ thống khai thác ưu điểm của UDP:  
+- Không cần kết nối (connectionless) → **giảm độ trễ**.  
+- Cấu trúc gói tin đơn giản → **xử lý nhanh**.  
+- Dễ mở rộng cho các bài toán như: chat nội bộ, gửi thông báo, quản lý hệ thống.  
 
-Bước 2: Import vào Eclipse
+---
 
-- Mở Eclipse.
-- Chọn File → Import.
-- Chọn Existing Projects into Workspace.
-- Duyệt đến thư mục project vừa clone về.
-- Nhấn Finish để import.
+## 🌟 Ưu điểm nổi bật
 
-Bước 3: Kiểm tra môi trường
+- ✅ **Dễ triển khai:** chỉ cần chạy server và client trên cùng mạng LAN.  
+- ⚡ **Tốc độ nhanh:** nhờ UDP không yêu cầu handshake.  
+- 📚 **Minh họa kiến thức thực tiễn:** phù hợp cho sinh viên học lập trình mạng, socket, giao thức truyền thông.  
+- 🔧 **Ứng dụng thực tế:** có thể mở rộng thành hệ thống chat nhóm, cảnh báo trong doanh nghiệp, hoặc giám sát hệ thống.  
 
-- Đảm bảo project đang dùng JavaSE-21.
-- Nếu thiếu thư viện, mở Project → Properties → Java Build Path và thêm JDK tương ứng.
+---
 
-Bước 4: Chạy ứng dụng
+## 🔧 2. Ngôn ngữ và Công nghệ Sử Dụng  
 
-- Chạy UDPServerChat trước để khởi động server.
-- Sau đó chạy UDPClientChat trên một hoặc nhiều máy để kết nối.
+| Thành phần | Mô tả |
+|-----------|-------|
+| **Ngôn ngữ** | [![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/) |
+| **Giao diện** | Java Swing |
+| **Giao thức mạng** | UDP (User Datagram Protocol) |
+| **IDE phát triển** | Eclipse (khuyến nghị bản mới nhất) |
+| **Môi trường chạy** | JDK 21 hoặc cao hơn |
 
-Bước 5: Gửi và nhận tin nhắn
+---
 
-- Nhập tin nhắn vào ô input, nhấn Gửi.
-- Các client khác sẽ ngay lập tức nhận được tin nhắn broadcast.
-- Có thể nhấn Stop Server / Stop Client để kết thúc phiên chat.
+## 🚀 3. Hình Ảnh Minh Họa  
 
-🎨 5. Minh họa giao diện (tùy chọn)
+<p align="center">
+  <img width="600" height="480" src="" alt="Ảnh 1"/> 
+</p>
+<p align="center"><b>Ảnh 1: Giao diện Server đang chạy</b></p>
 
+<p align="center">
+  <img width="450" height="260" src="" alt="Ảnh 2"/> 
+</p>
+<p align="center"><b>Ảnh 2: Giao diện nhập địa chỉ IP Server</b></p>
 
-📱 6. Thông tin liên hệ
+<p align="center">
+  <img width="600" height="480" src="" alt="Ảnh 3"/> 
+</p>
+<p align="center"><b>Ảnh 3: Giao diện Client gửi và nhận tin nhắn</b></p>
 
-- Họ và tên: Ngô Thành Đạt
-- Lớp: CNTT 16-01
-- Email: thanhdatdzhp11@gmail.com
-- SĐT: 0901 562 638
+---
 
-© 2025 AIoTLab – Faculty of Information Technology – DaiNam University.
+## 📦 4. Hướng Dẫn Cài Đặt & Sử Dụng  
+
+### 🔹 Yêu cầu hệ thống  
+- Eclipse IDE (bản mới nhất).  
+- JDK 21 hoặc cao hơn.  
+- Git để tải project từ GitHub.  
+
+### 🔹 Các bước thực hiện  
+
+#### **Bước 1: Clone project từ GitHub**
+```bash
+git clone https://github.com/caovan-huy/gui-tin-nhan-broadcast-qua-UDP/tree/main/Bai_Tap_Lon
