@@ -103,7 +103,7 @@ Hệ thống khai thác ưu điểm của UDP:
 
 #### **Bước 1: Clone project từ GitHub**
 ```bash
-https://github.com/thanhdatdzhp11/Gui-Tin-Nhan-Broadcast-qua-UDP/tree/main/TinNhanBROADCAST
+https://github.com/thanhdatdzhp/Gui-Tin-Nhan-Broadcast-qua-UDP/tree/main/TinnhanBroadCast
 ```
 
 Bước 2: Import vào Eclipse
