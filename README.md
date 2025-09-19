@@ -97,8 +97,7 @@ Hệ thống khai thác ưu điểm của UDP:
 ### 🔹 Các bước thực hiện  
 
 #### **Bước 1: Clone project từ GitHub**
-```bash
-git clone https://github.com/thanhdatdzhp11/gui-tin-nhan-broadcast-qua-UDP/
+
 
 Bước 2: Import vào Eclipse
 
