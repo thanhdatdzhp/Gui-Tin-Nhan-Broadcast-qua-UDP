@@ -96,4 +96,34 @@ Hệ thống khai thác ưu điểm của UDP:
 
 #### **Bước 1: Clone project từ GitHub**
 ```bash
-git clone https://github.com/caovan-huy/gui-tin-nhan-broadcast-qua-UDP/tree/main/Bai_Tap_Lon
+git clone https://github.com/thanhdatdzhp11/gui-tin-nhan-broadcast-qua-UDP/
+
+Bước 2: Import vào Eclipse
+
+- Mở Eclipse → File → Import → Existing Projects into Workspace.
+- Chọn thư mục project vừa clone về.
+- Nhấn Finish để hoàn tất.
+
+Bước 3: Kiểm tra môi trường
+- Đảm bảo project đang chạy với JavaSE-21.
+- Nếu thiếu thư viện, mở Project → Properties → Java Build Path để thêm JDK tương ứng.
+
+Bước 4: Chạy ứng dụng
+
+- Chạy UDPServerChat trước để khởi động server.
+- Chạy UDPClientChat trên một hoặc nhiều máy để gửi/nhận tin nhắn.
+
+Bước 5: Sử dụng
+
+- Nhập nội dung tin nhắn → nhấn Gửi.
+- Các client khác trong cùng mạng LAN sẽ nhận được tin nhắn ngay lập tức.
+- Có thể ấn Stop Server / Stop Client để kết thúc phiên chat.
+
+📱 5. Thông Tin Liên Hệ
+
+👤 Họ và tên: Ngô Thành Đạt
+🏫 Lớp: CNTT 16-01
+📧 Email: thanhdatdzhp11@gmail.com
+☎ Điện thoại: 0901 562 638
+
+© 2025 AIoTLab, Faculty of Information Technology – DaiNam University.
