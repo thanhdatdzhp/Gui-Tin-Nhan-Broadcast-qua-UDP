@@ -73,12 +73,12 @@ Hệ thống khai thác ưu điểm của UDP:
 <p align="center">
   <img width="600" height="480" src="https://github.com/thanhdatdzhp/Gui-Tin-Nhan-Broadcast-qua-UDP/blob/main/img/UDP%20RECEIVER.jpg" alt="Ảnh 1"/> 
 </p>
-<p align="center"><b>Ảnh 1: UDP Client </b></p>
+<p align="center"><b>Ảnh 1: Bộ nhận UDP </b></p>
 
 <p align="center">
   <img width="450" height="260" src="https://github.com/thanhdatdzhp/Gui-Tin-Nhan-Broadcast-qua-UDP/blob/main/img/UDP%20SENDER.jpg" alt="Ảnh 2"/> 
 </p>
-<p align="center"><b>Ảnh 2: UDP Server</b></p>
+<p align="center"><b>Ảnh 2: Bộ gửi UDP</b></p>
 
 <p align="center">
   <img width="600" height="480" src="https://github.com/thanhdatdzhp/Gui-Tin-Nhan-Broadcast-qua-UDP/blob/main/img/XuatCSV.jpg" alt="Ảnh 3"/> 
