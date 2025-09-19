@@ -71,17 +71,22 @@ Hệ thống khai thác ưu điểm của UDP:
 ## 🚀 3. Hình Ảnh Minh Họa  
 
 <p align="center">
-  <img width="600" height="480" src="https://github.com/thanhdatdzhp/Gui-Tin-Nhan-Broadcast-qua-UDP/blob/main/img/UDP%20RECEIVER.jpg" alt="Ảnh 1"/> 
+  <img width="600" height="480" src="https://github.com/thanhdatdzhp/Gui-Tin-Nhan-Broadcast-qua-UDP/blob/main/img/server.jpg" alt="Ảnh 1"/> 
 </p>
-<p align="center"><b>Ảnh 1: Bộ nhận UDP </b></p>
+<p align="center"><b>Ảnh 1: Bộ gửi UDP </b></p>
 
 <p align="center">
-  <img width="450" height="260" src="https://github.com/thanhdatdzhp/Gui-Tin-Nhan-Broadcast-qua-UDP/blob/main/img/UDP%20SENDER.jpg" alt="Ảnh 2"/> 
+  <img width="450" height="260" src="https://github.com/thanhdatdzhp/Gui-Tin-Nhan-Broadcast-qua-UDP/blob/main/img/nhantinnhan.jpg" alt="Ảnh 2"/> 
 </p>
-<p align="center"><b>Ảnh 2: Bộ gửi UDP</b></p>
+<p align="center"><b>Ảnh 2: Giao diện nhận tin nhắn</b></p>
 
 <p align="center">
-  <img width="600" height="480" src="https://github.com/thanhdatdzhp/Gui-Tin-Nhan-Broadcast-qua-UDP/blob/main/img/XuatCSV.jpg" alt="Ảnh 3"/> 
+  <img width="450" height="260" src="https://github.com/thanhdatdzhp/Gui-Tin-Nhan-Broadcast-qua-UDP/blob/main/img/nhanfile.jpg" alt="Ảnh 3"/> 
+</p>
+<p align="center"><b>Ảnh 2: Giao diện nhận file âm thanh , radio</b></p>
+
+<p align="center">
+  <img width="600" height="480" src="https://github.com/thanhdatdzhp/Gui-Tin-Nhan-Broadcast-qua-UDP/blob/main/img/cvs.jpg" alt="Ảnh 4"/> 
 </p>
 <p align="center"><b>Ảnh 3: Xuất CSV và mở bằng Excel</b></p>
 
