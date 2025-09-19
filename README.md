@@ -29,14 +29,16 @@ Hệ thống **gửi tin nhắn broadcast qua UDP** là một ứng dụng mô p
 
 Ứng dụng được xây dựng với hai thành phần chính:  
 
-- **Server:** lắng nghe gói tin được gửi đến trên một cổng UDP cố định, hiển thị nội dung tin nhắn lên giao diện và có thể phản hồi tới toàn bộ các client trong mạng.  
-- **Client:** cung cấp giao diện cho người dùng nhập nội dung tin nhắn, sau đó gửi tin đó đến địa chỉ broadcast. Tất cả client khác trong mạng nhận được gói tin ngay lập tức.  
+- **Server:**: đóng vai trò “điểm thu phát trung tâm”, lắng nghe các gói tin được gửi đến qua cổng UDP định trước, hiển thị nội dung tin nhắn lên giao diện và phản hồi cho tất cả các máy trong cùng mạng.  
+- **Client:** cho phép người dùng nhập nội dung tin nhắn và gửi đi. Tin nhắn này sẽ được broadcast tới địa chỉ quảng bá (broadcast address) của mạng LAN, đảm bảo tất cả các thiết bị đang chạy ứng dụng đều có thể nhận được. 
 
 ### 🔑 Nguyên lý hoạt động
-1. Client tạo một **DatagramPacket** chứa nội dung tin nhắn.
-2. Gói tin được gửi đến địa chỉ broadcast (ví dụ: `192.168.1.255`).
-3. Server và các client khác đang lắng nghe trên cổng UDP sẽ nhận được gói tin.
-4. Tin nhắn được hiển thị đồng thời trên nhiều máy, mô phỏng cơ chế truyền tin nhanh trong LAN.  
+UDP là một giao thức không kết nối (connectionless), tốc độ xử lý nhanh, gói tin được gửi đi mà không cần quá trình “bắt tay” như TCP. Khi người dùng gửi tin nhắn:
+1. Client tạo gói tin chứa dữ liệu người dùng nhập.
+2. Gói tin được gửi đến địa chỉ broadcast của mạng (ví dụ: 192.168.1.255).
+3. Tất cả các thiết bị trong cùng subnet đang lắng nghe trên cổng UDP đó sẽ nhận được gói tin.
+4. Server nhận và hiển thị nội dung, đồng thời có thể phản hồi lại cho các client khác.
+Điều này giúp hệ thống trở thành một giải pháp lý tưởng để truyền thông điệp nhanh trong mạng nội bộ.
 
 Hệ thống khai thác ưu điểm của UDP:  
 - Không cần kết nối (connectionless) → **giảm độ trễ**.  
@@ -47,10 +49,10 @@ Hệ thống khai thác ưu điểm của UDP:
 
 ## 🌟 Ưu điểm nổi bật
 
-- ✅ **Dễ triển khai:** chỉ cần chạy server và client trên cùng mạng LAN.  
-- ⚡ **Tốc độ nhanh:** nhờ UDP không yêu cầu handshake.  
-- 📚 **Minh họa kiến thức thực tiễn:** phù hợp cho sinh viên học lập trình mạng, socket, giao thức truyền thông.  
-- 🔧 **Ứng dụng thực tế:** có thể mở rộng thành hệ thống chat nhóm, cảnh báo trong doanh nghiệp, hoặc giám sát hệ thống.  
+- ✅ **Đơn giản, dễ triển khai:** không yêu cầu thiết lập kết nối phức tạp.  
+- ⚡ **Tốc độ truyền nhanh:**  do UDP không có cơ chế xác nhận gói tin nên độ trễ thấp, phù hợp với các ứng dụng thông báo tức thời.  
+- 📚 **Minh họa kiến thức lập trình mạng:**  giúp người học hiểu rõ hơn về socket, broadcast, và cơ chế hoạt động của UDP.  
+- 🔧 **Ứng dụng thực tiễn:**  có thể mở rộng để xây dựng các hệ thống chat nội bộ, công cụ gửi thông báo trong LAN, hoặc phần mềm hỗ trợ quản trị hệ thống.  
 
 ---
 
