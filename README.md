@@ -83,7 +83,7 @@ Hệ thống khai thác ưu điểm của UDP:
 <p align="center">
   <img width="450" height="260" src="https://github.com/thanhdatdzhp/Gui-Tin-Nhan-Broadcast-qua-UDP/blob/main/img/nhanfile.jpg" alt="Ảnh 3"/> 
 </p>
-<p align="center"><b>Ảnh 2: Giao diện nhận file âm thanh , radio</b></p>
+<p align="center"><b>Ảnh 3: Giao diện nhận file âm thanh , radio</b></p>
 
 <p align="center">
   <img width="600" height="480" src="https://github.com/thanhdatdzhp/Gui-Tin-Nhan-Broadcast-qua-UDP/blob/main/img/cvs.jpg" alt="Ảnh 4"/> 
