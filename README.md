@@ -118,14 +118,17 @@ Bước 3: Kiểm tra môi trường
 
 Bước 4: Chạy ứng dụng
 
-- Chạy UDPServerChat trước để khởi động server.
-- Chạy UDPClientChat trên một hoặc nhiều máy để gửi/nhận tin nhắn.
+- Chạy UDPSenderLTM.java trước để khởi động server.
+- Chạy UDPReceiverLTM.java trên một hoặc nhiều máy để nhận tin nhắn và các tập tin khác.
 
 Bước 5: Sử dụng
 
 - Nhập nội dung tin nhắn → nhấn Gửi.
-- Các client khác trong cùng mạng LAN sẽ nhận được tin nhắn ngay lập tức.
-- Có thể ấn Stop Server / Stop Client để kết thúc phiên chat.
+- Chọn 'Chọn tệp' để gửi các file.
+- Các client khác trong cùng mạng LAN khi online sẽ nhận được tin nhắn và file ngay lập tức , còn các mạng Lan khi không online sẽ k nhận đc tin nhắn và file.
+- Sau khi nhận được tệp file chúng ta có thể click vào file rồi nhận vào nút 'Phát' để bật file dữ liệu vừa nhận được
+
+
 
 📱 5. Thông Tin Liên Hệ
 
