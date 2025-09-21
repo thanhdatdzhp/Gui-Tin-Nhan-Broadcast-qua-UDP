@@ -88,7 +88,7 @@ Hệ thống khai thác ưu điểm của UDP:
 <p align="center">
   <img width="600" height="480" src="https://github.com/thanhdatdzhp/Gui-Tin-Nhan-Broadcast-qua-UDP/blob/main/img/cvs.jpg" alt="Ảnh 4"/> 
 </p>
-<p align="center"><b>Ảnh 3: Xuất CSV và mở bằng Excel</b></p>
+<p align="center"><b>Ảnh 4: Xuất CSV và mở bằng Excel</b></p>
 
 ---
 
